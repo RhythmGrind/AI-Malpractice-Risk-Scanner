@@ -1,0 +1,6 @@
+Case Name,Year,Specialty,Facts,Verdict,Key Error,Settlement
+Johnson v. Memorial Hospital,2019,Emergency,"55M presented to ED with chest pain radiating to left arm. Doctor gave aspirin, sent home without ECG. Patient died of MI 2 hours later.",Plaintiff,Failed to order ECG and rule out MI,$2.3M
+Smith v. County Hospital,2018,Emergency,"8yo with fever and headache. Diagnosed as viral illness. No lumbar puncture. Returned next day with meningitis.",Plaintiff,Failed to perform LP despite concerning symptoms,$1.8M
+Williams v. Regional Medical,2020,Family Medicine,"42F with 3 months abdominal pain, weight loss 15 lbs. Diagnosed as IBS. No imaging ordered. Found to have colon cancer stage III 6 months later.",Plaintiff,Failed to order imaging despite red flag symptoms,$950K
+Davis v. City Hospital,2017,Surgery,"Post-op patient with increasing abdominal pain. Surgeon attributed to normal post-op pain. No CT scan. Patient had perforated bowel.",Plaintiff,Failed to recognize surgical complication,$1.2M
+Martinez v. University Hospital,2021,Internal Medicine,"65M with new onset confusion. Diagnosed as UTI. No head CT performed. Patient had subdural hematoma.",Plaintiff,Failed to obtain neuroimaging for altered mental status,$875K

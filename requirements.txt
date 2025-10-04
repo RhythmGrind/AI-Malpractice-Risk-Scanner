@@ -1,0 +1,12 @@
+# 核心依赖 (必需 - 测试模式运行)
+streamlit==1.31.0
+python-dotenv==1.0.0
+pandas==2.1.3
+numpy==1.26.2
+
+# AI功能 (可选 - 仅在有API Key时需要，取消注释启用)
+# anthropic>=0.18.0
+# langgraph>=0.0.60
+# langchain>=0.1.0
+# langchain-core>=0.1.0
+# chromadb==0.4.18

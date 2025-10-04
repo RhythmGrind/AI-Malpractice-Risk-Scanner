@@ -1,0 +1,4 @@
+# This directory will contain:
+# - malpractice_cases.csv
+# - clinical_standards.json
+# - chroma_db/ (vector database)

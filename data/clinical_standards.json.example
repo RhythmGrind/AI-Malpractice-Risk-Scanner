@@ -1,0 +1,149 @@
+{
+  "chest_pain": {
+    "required_workup": [
+      "12-lead ECG within 10 minutes",
+      "Cardiac troponin (0 and 3 hours)",
+      "Vital signs including oxygen saturation",
+      "Chest X-ray",
+      "Basic metabolic panel"
+    ],
+    "red_flags": [
+      "Radiation to arm/jaw/back",
+      "Diaphoresis",
+      "Syncope",
+      "Shortness of breath",
+      "Known CAD or diabetes",
+      "Family history of early MI"
+    ],
+    "must_rule_out": [
+      "Myocardial infarction (MI)",
+      "Pulmonary embolism (PE)",
+      "Aortic dissection",
+      "Pneumothorax",
+      "Pericardial tamponade"
+    ],
+    "risk_scores": {
+      "name": "HEART score",
+      "low_risk_threshold": "<4",
+      "high_risk_threshold": "≥7",
+      "disposition": "HEART <4 可出院，≥4需住院观察"
+    },
+    "documentation_requirements": [
+      "Document HEART score calculation",
+      "Document complete differential diagnosis",
+      "Document shared decision making discussion",
+      "Provide written discharge instructions",
+      "Specify return precautions"
+    ]
+  },
+  "headache": {
+    "required_workup": [
+      "Detailed neurological examination",
+      "Vital signs including temperature",
+      "Fundoscopic examination",
+      "Consider CT head if red flags present",
+      "Consider lumbar puncture if meningitis suspected"
+    ],
+    "red_flags": [
+      "Sudden onset (thunderclap)",
+      "Fever with neck stiffness",
+      "New onset after age 50",
+      "Progressively worsening",
+      "Associated with neurological deficits",
+      "Immunocompromised patient"
+    ],
+    "must_rule_out": [
+      "Subarachnoid hemorrhage",
+      "Meningitis",
+      "Brain tumor",
+      "Temporal arteritis",
+      "Increased intracranial pressure"
+    ],
+    "risk_scores": {
+      "name": "SNNOOP10",
+      "description": "Mnemonic for red flag symptoms"
+    },
+    "documentation_requirements": [
+      "Document presence or absence of red flags",
+      "Document neurological examination findings",
+      "Document rationale if imaging not obtained",
+      "Document patient education and return precautions"
+    ]
+  },
+  "abdominal_pain": {
+    "required_workup": [
+      "Complete abdominal examination",
+      "Vital signs",
+      "Urinalysis for all patients",
+      "Pregnancy test for females of childbearing age",
+      "CBC and basic metabolic panel",
+      "Consider imaging based on presentation"
+    ],
+    "red_flags": [
+      "Severe pain (8-10/10)",
+      "Peritoneal signs (guarding, rebound)",
+      "Hypotension or tachycardia",
+      "Fever",
+      "Bloody stool or vomit",
+      "Unintentional weight loss",
+      "Age >50 with new symptoms"
+    ],
+    "must_rule_out": [
+      "Appendicitis",
+      "Bowel obstruction",
+      "Perforated viscus",
+      "Ectopic pregnancy",
+      "Abdominal aortic aneurysm",
+      "Mesenteric ischemia",
+      "Malignancy"
+    ],
+    "risk_scores": {
+      "name": "Alvarado score",
+      "description": "For appendicitis risk stratification"
+    },
+    "documentation_requirements": [
+      "Document location, quality, duration of pain",
+      "Document presence or absence of peritoneal signs",
+      "Document pregnancy status for females",
+      "Document rationale for imaging decisions",
+      "Document discharge instructions and follow-up plan"
+    ]
+  },
+  "shortness_of_breath": {
+    "required_workup": [
+      "Vital signs including pulse oximetry",
+      "Lung auscultation",
+      "Chest X-ray",
+      "ECG",
+      "CBC and BNP if cardiac etiology suspected",
+      "D-dimer if PE suspected and Wells score appropriate"
+    ],
+    "red_flags": [
+      "Oxygen saturation <90%",
+      "Respiratory rate >24",
+      "Chest pain",
+      "Hemoptysis",
+      "Unilateral leg swelling",
+      "Recent surgery or immobilization"
+    ],
+    "must_rule_out": [
+      "Pulmonary embolism",
+      "Acute coronary syndrome",
+      "Pneumonia",
+      "Pneumothorax",
+      "Acute heart failure",
+      "COPD exacerbation"
+    ],
+    "risk_scores": {
+      "name": "Wells score for PE",
+      "description": "Risk stratification for pulmonary embolism"
+    },
+    "documentation_requirements": [
+      "Document oxygen saturation on room air",
+      "Document lung examination findings",
+      "Document Wells score if PE considered",
+      "Document rationale for testing decisions",
+      "Document discharge oxygen requirements if applicable"
+    ]
+  }
+}

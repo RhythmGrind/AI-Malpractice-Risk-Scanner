@@ -1,0 +1,29 @@
+{
+  "chest_pain": {
+    "required_workup": [
+      "12-lead ECG within 10 minutes",
+      "Cardiac troponin (0 and 3 hours)",
+      "Vital signs including oxygen saturation",
+      "Chest X-ray"
+    ],
+    "red_flags": [
+      "Radiation to arm/jaw/back",
+      "Diaphoresis",
+      "Syncope",
+      "Shortness of breath"
+    ],
+    "must_rule_out": [
+      "Myocardial infarction (MI)",
+      "Pulmonary embolism (PE)",
+      "Aortic dissection"
+    ],
+    "risk_scores": {
+      "name": "HEART score",
+      "low_risk_threshold": "<4"
+    },
+    "documentation_requirements": [
+      "Document HEART score calculation",
+      "Document shared decision making"
+    ]
+  }
+}
