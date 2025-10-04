@@ -3,7 +3,15 @@
     "allow": [
       "Bash(mkdir:*)",
       "Bash(pip install:*)",
-      "Bash(python test:*)"
+      "Bash(python test:*)",
+      "Bash(python -m pip:*)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(test:*)",
+      "Bash(cat:*)",
+      "Bash(docker-compose config:*)",
+      "Bash(docker-compose:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
