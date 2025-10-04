@@ -1,75 +1,95 @@
-# Quick Start
+# Quick Start Guide
 
-This guide will get the AI Malpractice Risk Scanner running on your local machine.
+Get the AI Malpractice Risk Scanner running in 3 minutes.
 
-## 1. Prerequisites
+## Prerequisites
 
-- Python 3.9+
-- An Anthropic API key (for full functionality)
+- Docker and Docker Compose
+- (Optional) Anthropic API key for real AI analysis
 
-## 2. Setup
+## Start in 3 Steps
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-repo/AI-Malpractice-Risk-Scanner.git
-    cd AI-Malpractice-Risk-Scanner
-    ```
-
-2.  **Configure Environment Variables:**
-    -   Copy the example environment file:
-        ```bash
-        cp .env.example .env
-        ```
-    -   Edit the `.env` file and add your Anthropic API key:
-        ```
-        ANTHROPIC_API_KEY="your-api-key-here"
-        ```
-
-3.  **Install Dependencies:**
-    -   It's recommended to use a virtual environment.
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-    -   Install the required Python packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## 3. Running the Application
-
-The application consists of two main components: the Streamlit frontend and the FastAPI backend.
-
-### Step 1: Start the Backend Server
-
-In a terminal, navigate to the `backend` directory and run:
+### 1. Clone and Enter Directory
 
 ```bash
-cd backend
-
-# To load clinical standards into the vector database (only needs to be done once)
-python -m app.services.vector_db
-
-# Start the backend server
-uvicorn main:app --host 0.0.0.0 --port 8000
+cd AI-Malpractice-Risk-Scanner
 ```
 
-The backend API will now be running at `http://127.0.0.1:8000`.
-
-### Step 2: Start the Frontend UI
-
-In a **new terminal**, from the project root directory, run:
+### 2. Start All Services
 
 ```bash
-streamlit run app.py
+docker-compose up -d
 ```
 
-Or you can use the provided run scripts:
-- On Windows: `run.bat`
-- On macOS/Linux: `bash run.sh`
+That's it! The system will:
+- Build backend and frontend containers
+- Start the API server on port 8000
+- Start the web interface on port 5173
 
-Your browser should open to the Streamlit application, ready for use.
+### 3. Open in Browser
 
-## Test Mode
+Visit: **http://localhost:5173**
 
-If you start the Streamlit frontend (`app.py`) without the backend server running, it will automatically launch in **Test Mode**. In this mode, the application uses mock data, allowing you to explore the UI without needing an API key or running the backend.
+## Test the Mock API
+
+No API key needed for testing:
+
+```bash
+curl -X POST http://localhost:8000/api/v1/analyze-mock \
+  -H "Content-Type: application/json" \
+  -d '{"case_description":"Patient with chest pain"}'
+```
+
+## Using Real AI Analysis
+
+1. Get an Anthropic API key from https://console.anthropic.com/
+
+2. Create `.env` file:
+```bash
+echo "ANTHROPIC_API_KEY=your_key_here" > .env
+```
+
+3. Restart services:
+```bash
+docker-compose restart
+```
+
+4. Use the `/api/v1/analyze` endpoint (instead of `/analyze-mock`)
+
+## Useful Commands
+
+```bash
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+
+# Restart services
+docker-compose restart
+
+# Rebuild everything
+docker-compose up --build -d
+```
+
+## Troubleshooting
+
+**Frontend not loading?**
+- Check if port 5173 is available
+- View logs: `docker-compose logs frontend`
+
+**Backend errors?**
+- Check if port 8000 is available
+- View logs: `docker-compose logs backend`
+
+**Need to reset everything?**
+```bash
+docker-compose down
+docker-compose up --build -d
+```
+
+## Next Steps
+
+- Read [README.md](README.md) for full documentation
+- Explore API docs at http://localhost:8000/docs
+- Check project structure in [README.md](README.md#project-structure)
